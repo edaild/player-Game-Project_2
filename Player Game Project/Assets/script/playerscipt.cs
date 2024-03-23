@@ -16,7 +16,7 @@ public class playerscipt : MonoBehaviour
 
     Vector3 moveVec;
 
-    Rigidbody rb; // ÄÉ¸¯ÅÍ¸¦ ¿òÁ÷ÀÌ±â À§ÇØ ¼±¾ğ
+    Rigidbody rb; // ì¼€ë¦­í„°ë¥¼ ì›€ì§ì´ê¸° ìœ„í•´ ì„ ì–¸
     Animator anim;
 
     void Awake()
@@ -57,9 +57,9 @@ public class playerscipt : MonoBehaviour
         transform.LookAt(transform.position + moveVec);
     }
 
-    void Jump() // Á¡ÇÁ
+    void Jump() 
     {
-        if (jump && !isJump) // ! ºÎÁ¤¹® bool °ª¸¸ °¡´É
+        if (jump && !isJump) // ! ë¶€ì •ë¬¸ bool ê°’ë§Œ ê°€ëŠ¥
         {
             rb.AddForce(Vector3.up * 3, ForceMode.Impulse);
                 anim.SetBool("triggerJump", true);
